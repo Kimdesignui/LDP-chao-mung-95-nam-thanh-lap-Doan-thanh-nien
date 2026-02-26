@@ -220,6 +220,21 @@ body {
 }
 
 /* ===========================
+   APP PROMOTION BADGE
+=========================== */
+.app-badge-link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-badge-link .app-badge-img {
+    transition: transform 0.3s ease;
+}
+
+.app-badge-link:hover .app-badge-img {
+    transform: scale(1.05);
+}
+
+/* ===========================
    FOOTER
 =========================== */
 .footer-bg {
