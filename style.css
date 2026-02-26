@@ -3,7 +3,12 @@
 =========================== */
 html {
     scroll-behavior: smooth;
-    /* FIX: Smooth scroll for anchor links */
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1320px !important;
+    }
 }
 
 * {
@@ -56,18 +61,38 @@ body {
 }
 
 /* ===========================
-   CAROUSEL
+   INFINITE SLIDER
 =========================== */
-.carousel-banner {
+.infinite-slider {
     width: 100%;
-    min-height: 200px;
-    /* FIX: prevent collapse on slow image load */
-    max-height: 520px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.infinite-slider-track {
+    display: flex;
+    width: 200%;
+    animation: slide-infinite 20s linear infinite;
+}
+
+.infinite-banner {
+    width: 50%;
     object-fit: cover;
     object-position: center;
     display: block;
+    min-height: 200px;
     background-color: #f0f0f0;
-    /* subtle placeholder while loading */
+}
+
+@keyframes slide-infinite {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ===========================
