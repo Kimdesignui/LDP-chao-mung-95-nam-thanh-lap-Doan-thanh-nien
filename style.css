@@ -76,27 +76,29 @@ body {
    BOOTSTRAP COLOR OVERRIDES
 =========================== */
 .btn-outline-primary {
-    color: #2B3B51;
-    border-color: #2B3B51;
+    color: #fff;
+    background-color: #da251d;
+    border-color: #da251d;
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-    background-color: #2B3B51;
-    border-color: #2B3B51;
+    background-color: #b71c1c;
+    border-color: #b71c1c;
     color: #fff;
 }
 
-/* FIX: Secondary button uses brand color instead of default gray */
+/* Giới thiệu button: outline đỏ viền đỏ */
 .btn-outline-secondary {
-    color: #555;
-    border-color: #adb5bd;
+    color: #da251d;
+    border-color: #da251d;
+    background-color: transparent;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
-    background-color: #2B3B51;
-    border-color: #2B3B51;
+    background-color: #da251d;
+    border-color: #da251d;
     color: #fff;
 }
 
@@ -160,7 +162,7 @@ body {
     /* Zoom on hover */
 }
 
-/* FIX: book-title now properly styled and truncated */
+/* Book title: 16px, bold */
 .book-title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -168,10 +170,11 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: 700;
     line-height: 1.4;
     min-height: 2.4em;
-    color: #555;
+    color: #333;
     margin-bottom: 0;
     padding: 0 2px;
 }
