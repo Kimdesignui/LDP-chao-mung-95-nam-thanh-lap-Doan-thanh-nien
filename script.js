@@ -11,25 +11,54 @@ document.addEventListener("DOMContentLoaded", function () {
     const carouselEl = document.querySelector('#mainCarousel');
     if (!carouselEl) return;
 
-    const items = carouselEl.querySelectorAll('.carousel-item');
-    const indicators = carouselEl.querySelectorAll('.carousel-indicators button');
+    const items = Array.from(carouselEl.querySelectorAll('.carousel-item'));
+    const indicators = Array.from(carouselEl.querySelectorAll('.carousel-indicators button'));
     let currentIndex = 0;
     const totalItems = items.length;
     let slideInterval;
 
+    // Force absolute positioning and opacity transitions on items so JS can control them manually
+    items.forEach((item, index) => {
+        item.style.position = 'absolute';
+        item.style.top = '0';
+        item.style.left = '0';
+        item.style.width = '100%';
+        item.style.height = '100%';
+        item.style.transition = 'opacity 0.6s ease-in-out';
+
+        if (index === 0) {
+            item.style.opacity = '1';
+            item.style.zIndex = '2';
+            item.classList.add('active');
+            if (indicators[index]) indicators[index].classList.add('active');
+        } else {
+            item.style.opacity = '0';
+            item.style.zIndex = '1';
+            item.classList.remove('active');
+            if (indicators[index]) indicators[index].classList.remove('active');
+        }
+    });
+
+    // Make the first item relative so the container has height
+    if (items.length > 0) items[0].style.position = 'relative';
+
     function goToSlide(index) {
+        if (totalItems === 0) return;
+
         // Wrap around logic
         if (index < 0) index = totalItems - 1;
         if (index >= totalItems) index = 0;
 
-        // Remove active class from current
-        items[currentIndex].classList.remove('active');
+        // Old slide fades out
+        items[currentIndex].style.opacity = '0';
+        items[currentIndex].style.zIndex = '1';
         if (indicators[currentIndex]) indicators[currentIndex].classList.remove('active');
 
         currentIndex = index;
 
-        // Add active class to new
-        items[currentIndex].classList.add('active');
+        // New slide fades in
+        items[currentIndex].style.opacity = '1';
+        items[currentIndex].style.zIndex = '2';
         if (indicators[currentIndex]) indicators[currentIndex].classList.add('active');
     }
 
@@ -63,7 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Indicator clicks
     indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
+        indicator.addEventListener('click', (e) => {
+            e.preventDefault();
             goToSlide(index);
             resetTimer();
         });
@@ -71,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Auto play timer
     function startTimer() {
-        slideInterval = setInterval(nextSlide, 3000);
+        slideInterval = setInterval(nextSlide, 3500);
     }
 
     function resetTimer() {
