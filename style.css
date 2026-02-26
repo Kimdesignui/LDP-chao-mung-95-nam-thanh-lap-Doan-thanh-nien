@@ -18,6 +18,14 @@ html {
     }
 }
 
+/* Grid sách luôn cách mép 48px trên mọi màn hình */
+#booklist .container,
+#gioi-thieu-sach .container {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+    max-width: 100%;
+}
+
 * {
     box-sizing: border-box;
 }
