@@ -5,11 +5,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1320px !important;
-    }
-}
+
 
 /* Responsive container padding for Header, Book Grids, App Promotion, and Footer */
 .navbar .container,
