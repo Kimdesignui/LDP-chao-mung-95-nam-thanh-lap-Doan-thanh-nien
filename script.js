@@ -6,4 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
+
+    // Initialize the carousel explicitly to prevent slider freeze issues
+    const myCarouselElement = document.querySelector('#mainCarousel');
+    if (myCarouselElement) {
+        new bootstrap.Carousel(myCarouselElement, {
+            interval: 3000,
+            ride: 'carousel'
+        });
+    }
 });
