@@ -42,16 +42,32 @@ body {
     color: #fff;
 }
 
+/* FIX: Secondary button uses brand color instead of default gray */
+.btn-outline-secondary {
+    color: #555;
+    border-color: #adb5bd;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: #2B3B51;
+    border-color: #2B3B51;
+    color: #fff;
+}
+
 /* ===========================
    CAROUSEL
 =========================== */
 .carousel-banner {
     width: 100%;
+    min-height: 200px;
+    /* FIX: prevent collapse on slow image load */
     max-height: 520px;
     object-fit: cover;
-    /* FIX: fill frame without distortion */
     object-position: center;
     display: block;
+    background-color: #f0f0f0;
+    /* subtle placeholder while loading */
 }
 
 /* ===========================
