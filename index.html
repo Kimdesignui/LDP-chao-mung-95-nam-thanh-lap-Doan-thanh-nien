@@ -29,40 +29,18 @@
 
 <body>
     <!-- ===== NAVBAR ===== -->
-    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top shadow-sm">
-        <div class="container position-relative d-flex align-items-center">
-
-            <!-- Left: Danh sách ấn phẩm (Desktop only) -->
-            <div class="d-none d-md-block">
-                <a class="btn btn-outline-danger btn-sm" href="#booklist">Danh sách ấn phẩm</a>
-            </div>
-
-            <!-- Center: Logo -->
-            <a class="navbar-brand mx-auto" href="#">
+    <nav class="navbar navbar-light bg-white sticky-top shadow-sm py-2">
+        <div class="container d-flex align-items-center justify-content-between">
+            <!-- Left: Logo -->
+            <a class="navbar-brand m-0" href="#">
                 <img src="https://images.nxbxaydung.com.vn/Avatar/image-20240301094520911.svg" alt="NXB Xây Dựng Logo"
                     style="height: 48px;">
             </a>
 
-            <!-- Mobile: Hamburger toggle -->
-            <button class="navbar-toggler d-md-none border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Right: Phone button (Desktop only) -->
-            <div class="d-none d-md-block">
-                <a class="btn btn-outline-danger btn-sm" href="tel:0327888669">
-                    <i class="fas fa-phone me-1"></i>0327888669
-                </a>
-            </div>
-        </div>
-
-        <!-- Mobile Dropdown Menu (hidden on desktop via d-md-none) -->
-        <div class="collapse navbar-collapse d-md-none" id="mobileMenu">
-            <div class="container d-flex flex-column align-items-center py-3 gap-2">
-                <a class="btn btn-outline-danger w-75" href="#booklist">Danh sách ấn phẩm</a>
-                <a class="btn btn-outline-danger w-75" href="tel:0327888669">
+            <!-- Right: Links -->
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <a class="btn btn-outline-danger btn-sm d-none d-md-inline-block" href="#booklist">Danh sách ấn phẩm</a>
+                <a class="btn btn-outline-danger btn-sm fw-semibold" href="tel:0327888669">
                     <i class="fas fa-phone me-1"></i>0327888669
                 </a>
             </div>
