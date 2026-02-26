@@ -11,10 +11,12 @@ html {
     }
 }
 
-/* Responsive container padding for Header and Book Grids */
+/* Responsive container padding for Header, Book Grids, App Promotion, and Footer */
 .navbar .container,
 #booklist .container,
-#gioi-thieu-sach .container {
+#gioi-thieu-sach .container,
+#app-promotion .container,
+.footer-bg .container {
     padding-left: 120px !important;
     padding-right: 120px !important;
     max-width: 100%;
@@ -24,7 +26,9 @@ html {
 
     .navbar .container,
     #booklist .container,
-    #gioi-thieu-sach .container {
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
         padding-left: 80px !important;
         padding-right: 80px !important;
     }
@@ -34,7 +38,9 @@ html {
 
     .navbar .container,
     #booklist .container,
-    #gioi-thieu-sach .container {
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
         padding-left: 64px !important;
         padding-right: 64px !important;
     }
@@ -44,7 +50,9 @@ html {
 
     .navbar .container,
     #booklist .container,
-    #gioi-thieu-sach .container {
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
         padding-left: 24px !important;
         padding-right: 24px !important;
     }
@@ -54,7 +62,9 @@ html {
 
     .navbar .container,
     #booklist .container,
-    #gioi-thieu-sach .container {
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
         padding-left: 16px !important;
         padding-right: 16px !important;
     }
@@ -225,7 +235,7 @@ body {
    FOOTER
 =========================== */
 .footer-bg {
-    background-color: #efd296;
+    background-color: #f1f1f1;
 }
 
 .footer-heading {
