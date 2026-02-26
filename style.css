@@ -26,6 +26,24 @@ html {
     max-width: 100%;
 }
 
+@media (max-width: 575.98px) {
+
+    #booklist .container,
+    #gioi-thieu-sach .container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+@media (max-width: 389.98px) {
+
+    #booklist .container,
+    #gioi-thieu-sach .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
