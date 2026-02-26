@@ -11,23 +11,38 @@ html {
     }
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .container {
-        padding-left: 48px !important;
-        padding-right: 48px !important;
-    }
-}
-
-/* Grid sách luôn cách mép 48px trên mọi màn hình */
+/* Responsive container padding for Header and Book Grids */
+.navbar .container,
 #booklist .container,
 #gioi-thieu-sach .container {
-    padding-left: 48px !important;
-    padding-right: 48px !important;
+    padding-left: 120px !important;
+    padding-right: 120px !important;
     max-width: 100%;
+}
+
+@media (max-width: 1027.98px) {
+
+    .navbar .container,
+    #booklist .container,
+    #gioi-thieu-sach .container {
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+    }
+}
+
+@media (max-width: 785.98px) {
+
+    .navbar .container,
+    #booklist .container,
+    #gioi-thieu-sach .container {
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+    }
 }
 
 @media (max-width: 575.98px) {
 
+    .navbar .container,
     #booklist .container,
     #gioi-thieu-sach .container {
         padding-left: 24px !important;
@@ -37,29 +52,9 @@ html {
 
 @media (max-width: 389.98px) {
 
+    .navbar .container,
     #booklist .container,
     #gioi-thieu-sach .container {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-}
-
-/* Header: padding giống grid sách */
-.navbar .container {
-    padding-left: 48px !important;
-    padding-right: 48px !important;
-    max-width: 100%;
-}
-
-@media (max-width: 575.98px) {
-    .navbar .container {
-        padding-left: 24px !important;
-        padding-right: 24px !important;
-    }
-}
-
-@media (max-width: 389.98px) {
-    .navbar .container {
         padding-left: 16px !important;
         padding-right: 16px !important;
     }
