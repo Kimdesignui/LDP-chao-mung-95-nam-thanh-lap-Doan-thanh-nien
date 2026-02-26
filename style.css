@@ -151,16 +151,8 @@ body {
 }
 
 /* ===========================
-   CAROUSEL
+   CAROUSEL OVERRIDES
 =========================== */
-.carousel-banner {
-    width: 100%;
-    aspect-ratio: 1920 / 700;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    background-color: #f0f0f0;
-}
 
 /* ===========================
    SECTION TITLE
