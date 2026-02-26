@@ -55,8 +55,8 @@
             </div>
         </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div class="collapse navbar-collapse" id="mobileMenu">
+        <!-- Mobile Dropdown Menu (hidden on desktop via d-md-none) -->
+        <div class="collapse navbar-collapse d-md-none" id="mobileMenu">
             <div class="container d-flex flex-column align-items-center py-3 gap-2">
                 <a class="btn btn-outline-danger w-75" href="#booklist">Danh sách ấn phẩm</a>
                 <a class="btn btn-outline-danger w-75" href="tel:0327888669">
@@ -69,7 +69,7 @@
     <main>
         <!-- ===== HERO CAROUSEL ===== -->
         <section>
-            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
