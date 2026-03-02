@@ -1,0 +1,264 @@
+/* ===========================
+   BASE
+=========================== */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Responsive container padding for Header, Book Grids, App Promotion, and Footer */
+.navbar .container,
+#booklist .container,
+#gioi-thieu-sach .container,
+#app-promotion .container,
+.footer-bg .container {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+    max-width: 100%;
+}
+
+@media (max-width: 1027.98px) {
+
+    .navbar .container,
+    #booklist .container,
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+    }
+}
+
+@media (max-width: 785.98px) {
+
+    .navbar .container,
+    #booklist .container,
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .navbar .container,
+    #booklist .container,
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+@media (max-width: 389.98px) {
+
+    .navbar .container,
+    #booklist .container,
+    #gioi-thieu-sach .container,
+    #app-promotion .container,
+    .footer-bg .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar-brand img {
+    transition: opacity 0.2s ease;
+}
+
+.navbar-brand img:hover {
+    opacity: 0.85;
+}
+
+/* ===========================
+   MARQUEE
+=========================== */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #da251d;
+    color: #ffd700;
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ===========================
+   BOOTSTRAP COLOR OVERRIDES
+=========================== */
+.btn-outline-primary {
+    color: #fff;
+    background-color: #da251d;
+    border-color: #da251d;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+    color: #fff;
+}
+
+/* Giới thiệu button: outline đỏ viền đỏ */
+.btn-outline-secondary {
+    color: #da251d;
+    border-color: #da251d;
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: #da251d;
+    border-color: #da251d;
+    color: #fff;
+}
+
+/* ===========================
+   CAROUSEL OVERRIDES
+=========================== */
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+.section-title {
+    color: #2B3B51;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #dc3545;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* ===========================
+   BOOK CARDS
+=========================== */
+.book-cover-wrapper {
+    overflow: hidden;
+    border-radius: 6px;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.book-cover-wrapper:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.book-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    /* FIX: Consistent book cover ratio */
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.book-cover-wrapper:hover .book-img {
+    transform: scale(1.05);
+    /* Zoom on hover */
+}
+
+/* Book title: 16px, bold */
+.book-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    min-height: 2.8em;
+    color: #333;
+    margin-bottom: 12px;
+    padding: 0 2px;
+}
+
+/* ===========================
+   APP PROMOTION BADGE
+=========================== */
+.app-badge-link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-badge-link .app-badge-img {
+    transition: transform 0.3s ease;
+}
+
+.app-badge-link:hover .app-badge-img {
+    transform: scale(1.05);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer-bg {
+    background-color: #f1f1f1;
+}
+
+.footer-heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #2B3B51;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #dc3545;
+    text-decoration: underline;
+}
